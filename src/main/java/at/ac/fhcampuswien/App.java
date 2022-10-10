@@ -6,7 +6,11 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number:");
+
+
+
     }
 
     //todo Task 2
@@ -16,7 +20,15 @@ public class App {
 
     //todo Task 3
     public void printPyramid(){
-        // input your solution here
+        for ( int i = 0; i < 6 ; i++) {
+            for (int k = 0; k < 6 - i; k++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < 2 * i + 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     //todo Task 4
@@ -31,7 +43,7 @@ public class App {
 
     //todo Task 6
     public void happyNumbers(){
-        // input your solution here
+
     }
 
     public static void main(String[] args){
