@@ -17,7 +17,7 @@ public class App {
             //System.out.printf
 
             if (count == 1 && number <= 0) {
-                System.out.println("No number enterd.");
+                System.out.println("No number entered.");
                 break;
             }
             if (number > max) {
@@ -65,11 +65,11 @@ public class App {
 
     //todo Task 4
     public void printRhombus() {
-        Scanner scann = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("h: ");
-        int h = scann.nextInt();
+        int h = scanner.nextInt();
         System.out.print("c: ");
-        char c = scann.next().charAt(0);
+        char c = scanner.next().charAt(0);
         if (h%2 == 0) {
             System.out.println("Invalid number!");
         } else {
@@ -86,16 +86,17 @@ public class App {
                 System.out.println();
             }
             for (int i = h/2; i > 0; i--) {
-                for (int j = h/2; j >= i; j--){
+                for (int j = h / 2; j >= i; j--) {
                     System.out.print(" ");
                 }
-                for (int k = i; k > 0; k--){
-                    System.out.print((char) (c-k+1));
+                for (int k = i; k > 0; k--) {
+                    System.out.print((char) (c - k + 1));
                 }
-                for (int l = 1; l <i; l++)
+                for (int l = 1; l < i; l++) {
                     System.out.print((char) (c - l));
+                }
+                System.out.println();
             }
-            System.out.println();
         }
     }
 
