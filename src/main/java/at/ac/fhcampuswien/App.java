@@ -102,13 +102,68 @@ public class App {
 
     //todo Task 5
     public void marks(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+       int sum = 0;
+       int count5 = 0;
+       int countNum = 1;
+       boolean isInput = true;
+
+       while (isInput) {
+           System.out.print("Mark " + countNum + ": ");
+
+           int number = scanner.nextInt();
+
+           if (number > 0 && number <= 5) {
+               sum = sum + number;
+               countNum++;
+               if (number == 5) {
+                   count5++;
+               }
+           } else if (number < 0 || number > 5) {
+               System.out.println("Invalid mark!");
+           }
+           if (number == 0) {
+               float mean;
+               if (countNum == 1) {
+                   mean = (float) sum / (countNum);
+               } else {
+                   mean = (float) sum / (countNum - 1);
+               }
+               System.out.printf("Average: " + "%.2f", mean);
+               System.out.println();
+               System.out.println("Negative marks! " + count5);
+               isInput = false;
+           }
+       }
     }
 
     //todo Task 6
     public void happyNumbers(){
+        //unhappy zahlen n ∈ N
+        Scanner scanner = new Scanner ( System.in );
+        System.out.print("n: ");
+        int number = scanner.nextInt();
+        int num2;
+        int sum = 0;
 
+            while(number !=1 && number !=4) {
+                while (number > 0) {
+                    num2 = number % 10;
+                    sum = (num2 * num2) + sum;
+                    number = number / 10;
+                }
+                number = sum;
+                sum = 0;
+            }
+            if (number == 1) {
+                    System.out.println("Happy number!");
+            }
+            else {
+                System.out.println("Sad number!");
+            }
     }
+
+
 
     public static void main(String[] args){
         App exercise2 = new App();
