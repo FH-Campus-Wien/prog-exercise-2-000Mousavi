@@ -131,7 +131,7 @@ public class App {
                }
                System.out.printf("Average: " + "%.2f", mean);
                System.out.println();
-               System.out.println("Negative marks! " + count5);
+               System.out.println("Negative marks: " + count5);
                isInput = false;
            }
        }
