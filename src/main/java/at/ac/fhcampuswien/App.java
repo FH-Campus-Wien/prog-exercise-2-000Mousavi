@@ -49,7 +49,7 @@ public class App {
                     System.out.print(counter + " ");
                     counter++;
                 }
-                System.out.println(" ");
+                System.out.println();
             }
         }
     }
