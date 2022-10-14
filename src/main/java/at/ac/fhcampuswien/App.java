@@ -34,19 +34,23 @@ public class App {
 
     //todo Task 2
     public void stairs() {
+        int x;
         Scanner scanner = new Scanner(System.in);
         System.out.print("n: ");
-        int k = 1;
-        int rows = scanner.nextInt();
-        if (rows <= 0) {
-            System.out.println("invalid number!");
+        x = scanner.nextInt();
+
+        if (x <= 0) {
+            System.out.println("Invalid number!");
         } else {
-            for (int i = 1; i <= rows; i++) {
-                for (int j = 0; j < 1; j++) {
-                    System.out.print(k++ + " ");
+            int counter = 1;
+            for (int i = 0; i < x; i++) {
+
+                for (int j = 0; i >= j; j++) {
+                    System.out.print(counter + " ");
+                    counter++;
                 }
+                System.out.println(" ");
             }
-            System.out.println();
         }
     }
 
